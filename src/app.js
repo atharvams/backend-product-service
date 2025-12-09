@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/products", productRoutes);
+app.use("/api/v1/products", productRoutes);
 
 app.get("/", (req, res) => {
   res.send("Products Microservice Running");
