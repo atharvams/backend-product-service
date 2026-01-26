@@ -13,4 +13,12 @@ app.get("/", (req, res) => {
   res.send("Products Microservice Running");
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "UP",
+    service: "product-service",
+    timestamp: new Date().toISOString(),
+  });
+});
+
 export default app;
